@@ -16,7 +16,7 @@ weather.temperature = {
 //App consts and vars
 const KELVIN = 273;
  //API KEY
- const key = "f1aec1b78566a1751abb781401fef63c";
+ const key = "PUT YOUR OPENWEATHER API KEY";
 
  //Check if browser supports geolocation
 if("geolocation" in navigator){
