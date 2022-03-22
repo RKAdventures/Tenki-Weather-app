@@ -18,7 +18,7 @@ weather.temperature = {
 
 //App consts and vars
 const KELVIN = 273;
- //API KEY 
+ //API KEY
 const key = getKey();
 
  //Check if browser supports geolocation
@@ -45,7 +45,7 @@ function showError(error){
 
 setTimeout(function(){
     location.reload();
-    
+
 }, 2000000);
 
 //Get weather from API provider
@@ -87,10 +87,10 @@ function celsiusToFahrenheit(temperature){
 tempElement.addEventListener("click", function(){
     if(weather.temperature.value === undefined) return;
     if(weather.temperature.unit === "celsius"){
-        
+
         let fahrenheit = celsiusToFahrenheit(weather.temperature.value);
         fahrenheit = Math.floor(fahrenheit);
-        
+
         tempElement.innerHTML = `${fahrenheit}° <span>F</span>`;
         weather.temperature.unit = "fahrenheit"
     }else{
@@ -104,5 +104,3 @@ tempElement.addEventListener("click", function(){
 const btn = document.querySelector(".btn-toggle");
 
 const theme = document.querySelector("#theme-link");
-
-
