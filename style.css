@@ -1,5 +1,7 @@
 *{
     font-family: "Rimouski";
+    margin: auto;
+   
 }
 
 body{
@@ -17,6 +19,7 @@ body{
     padding-bottom : 50px;
 }*/
 .container{
+    margin-top: 200px;
     width: 300px;
     border-radius: 70px;
     position: relative;

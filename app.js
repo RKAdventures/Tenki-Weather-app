@@ -1,3 +1,6 @@
+import {getKey} from './api.mjs';
+
+
 //Select elements
 const iconElement = document.querySelector(".weather-icon");
 const tempElement = document.querySelector(".temperature-value p");
@@ -15,8 +18,8 @@ weather.temperature = {
 
 //App consts and vars
 const KELVIN = 273;
- //API KEY
- const key = "f1aec1b78566a1751abb781401fef63c";
+ //API KEY 
+const key = getKey();
 
  //Check if browser supports geolocation
 if("geolocation" in navigator){
@@ -39,6 +42,11 @@ function showError(error){
     notificationElement.style.display = "block";
     notificationElement.innerHTML = `<p> ${error.message} </p>`;
 }
+
+setTimeout(function(){
+    location.reload();
+    
+}, 2000000);
 
 //Get weather from API provider
 function getWeather(latitude, longitude){
@@ -98,10 +106,3 @@ const btn = document.querySelector(".btn-toggle");
 const theme = document.querySelector("#theme-link");
 
 
-btn.addEventListener("click", function(){
-    if (theme.getAttribute("href") == "light-theme.css"){
-        theme.href = "dark-theme.css";
-    }else{
-        theme.href = "light-theme.css"
-    }
-});
